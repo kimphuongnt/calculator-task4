@@ -1,70 +1,41 @@
-# Getting Started with Create React App
+# Responsive Web Design và Tailwind CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Responsive Design
+Tự động điều chỉnh giao diện, kích cỡ phù hợp với độ phân giải của màn hình thiết bị hiển thị.
 
-## Available Scripts
+## Tailwind CSS
+Tailwind CSS là framework CSS, cung cấp các lớp tiện ích nhưng không cung cấp các thành phần UI có sẵn. Thay vào đó, nó cung cấp các lớp CSS để tự tạo kiểu dáng cho thành phần của mình.
 
-In the project directory, you can run:
+### Breakpoints
 
-### `npm start`
+| Breakpoint prefix | Minimum width | CSS |
+|-------------------|---------------|-----|
+| sm | 640px | `@media (min-width: 640px) { ... }` |
+| md | 768px | `@media (min-width: 768px) { ... }` |
+| lg | 1024px | `@media (min-width: 1024px) { ... }` |
+| xl | 1280px | `@media (min-width: 1280px) { ... }` |
+| 2xl | 1536px | `@media (min-width: 1536px) { ... }` |
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Cài đặt Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Tạo project React như bình thường
+2. Cài đặt Tailwind CSS
+### Split component: 
+chia 1 conponent lớn thành nhiều component nhỏ, mỗi component nhỏ tập trung vào 1 chức năng cụ thể. => tái sử dụng code, dễ quản lý và debug
+### Custom hook: 
+tự tạo ra 1 hook mới với chức năng riêng biệt, tái sử dụng, tránh lặp lại code.
+### Routing: 
+điều hướng các trang mà không tải lại toàn bộ web.
 
-### `npm test`
+-	npm isntall react-router-dom
+-	import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+  
+BrowserRouter bao bọc toàn bộ ứng dụng, chịu trách nhiệm cho việc xử lý thay đổi về URL. Khi URL thay đổi, nó sẽ check URL và hiển thị component tương ứng.
+Routes chứa danh sách các Route và quyết định component nào hiển thị ở URL hiện tại. Nó kiểm tra từng Route, khi URL của trình duyệt khớp với path của Route thì nó hiện component đó.
+useNegative thay đổi URL và chuyển hướng người dùng đến 1 trang khác khi nhấn nút…
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+BrowserRouter: Bọc ứng dụng để cung cấp khả năng điều hướng.
+Routes: Xác định các đường dẫn và thành phần tương ứng.
+Route: Định nghĩa từng đường dẫn và thành phần.
+useNavigate: Điều hướng lập trình để chuyển đổi giữa các trang. 
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
